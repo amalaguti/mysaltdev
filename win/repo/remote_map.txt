@@ -1,0 +1,2 @@
+# winrepo_remote map as of 13 Jan 2016 09:34:36.491780
+salt-winrepo = https://github.com/saltstack/salt-winrepo.git
