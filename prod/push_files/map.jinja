@@ -1,0 +1,14 @@
+{## Start with  defaults from defaults.yaml ##}
+
+# Jinja map
+
+{% set greeting = salt['grains.filter_by']({
+    'Debian': {
+        'message': 'FROM THE DEBIAN FAMILY',
+        'greetingfilename': 'greetingDEB.txt',
+    },
+    'RedHat': {
+        'message': 'FROM THE REDHAT FAMILY',
+        'greetingfilename': 'greetingRH.txt',
+    },
+} , grain="os_family", merge=none, default='RedHat') %}
